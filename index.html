@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PSAA - Meeting Finder</title>
+    <style>
+      body { background: white; color: gray; font-family: Georgia, serif; font-size: 18px; line-height: 1.4; }
+      main { background: white; border: 1px solid lightgray; margin: 20px auto; padding: 0 15px; }
+      main > h1 { border-bottom: 1px solid lightgray; color: firebrick; margin: 30px 0 0; }
+      p { margin-top: 15px; }
+      a { color: firebrick; }
+      @media (min-width: 620px) { main { width: 90%; } }
+      @media (min-width: 800px) { main { width: 80%; } }
+      @media (min-width: 1400px) { main { width: 1300px; } }
+    </style>
+    <link rel="stylesheet" href="https://react.meetingguide.org/style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Puget Sound AA Meeting Finder</h1>
+      <meetings src="https://spreadsheets.google.com/feeds/list/1QUCmXBisFvFx9s00_Wx3atgL_kMCmQXekRhTvTYIJy4/1/public/values?alt=json"/>
+    </main>
+    <script src="https://react.meetingguide.org/app.js" async></script>
+  </body>
+</html>
