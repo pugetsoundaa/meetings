@@ -3,25 +3,74 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>PSAA - Meeting Finder</title>
+    <title>Puget Sound A.A. - Meeting Finder</title>
     <style>
-      body { background: white; color: gray; font-family: Georgia, serif; font-size: 18px; line-height: 1.4; }
-      main { background: white; border: 1px solid lightgray; margin: 20px auto; padding: 0 15px; }
-      main > h1 { border-bottom: 1px solid lightgray; color: firebrick; margin: 30px 0 0; }
-      p { margin-top: 15px; }
-      a { color: firebrick; }
-      @media (min-width: 620px) { main { width: 90%; } }
-      @media (min-width: 800px) { main { width: 80%; } }
-      @media (min-width: 1400px) { main { width: 1300px; } }
+      #opening {
+        text-align: center;
+      }
+
+      #titleimg img {
+        margin-top:  20px;
+        margin-bottom: 20px;
+        max-width: 100%;
+      }
+
+      #top_links {
+        font-size: 1.15em;
+      }
+
+      #meetingguide {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #meetingguide_message {
+        font-size: 1.3em;
+        font-style: italic;
+      }
+
+      #meetingguide_message, #meetingguide_logo {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10px;
+      }
     </style>
-    <link rel="stylesheet" href="https://react.meetingguide.org/style.css">
   </head>
   <body>
-    <main>
-      <h1>Puget Sound AA Meeting Finder</h1>
-      <p><strong>Notice:</strong> This meeting finder is still a work in progress and should only be used for testing purposes. To find meetings please use our <a href="https://apps.pugetsoundaa.org/meetinglist/search.html">meeting lists</a> web app.</p>
-      <meetings src="https://spreadsheets.google.com/feeds/list/1QUCmXBisFvFx9s00_Wx3atgL_kMCmQXekRhTvTYIJy4/1/public/values?alt=json"/>
-    </main>
-    <script src="https://react.meetingguide.org/app.js" async></script>
+    <div id="opening">
+
+      <div id="titleimg">
+        <a href="https://www.pugetsoundaa.org">
+          <img id="psaa_logo" src="psaalogo.jpeg" alt="Puget Sound A.A.">
+        </a>
+      </div>
+
+      <div id="top_links">
+          <p>
+            <a href="https://www.pugetsoundaa.org">Puget Sound A.A. Home</a> - <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdYF4tZIz0NYiOTYGe4VajYIazQdQmc3ZS-S3CLaPnbC3Xxew/viewform">Meeting Update Form</a> - <a target="_blank" href="https://www.onlinedistrict25aa.org/online-groups/daily-meetings">Additional Western WA Online Meetings</a>
+          </p>
+      </div>
+
+      <div id="meetingguide">
+        <div id="meetingguide_message">
+          <p>You can also find our local meetings in the <a target="_blank" href="https://www.aa.org/pages/en_US/meeting-guide">Meeting Guide</a> app, the official meeting finder of A.A. World Services.</p>
+        </div>
+        <div id="meetingguide_logo">
+          <a target="_blank" href="https://www.aa.org/pages/en_US/meeting-guide"><img src="MeetingGuideLogo.png" alt="Meeting Guide Logo" /></a>
+        </div>
+      </div>
+   </div>
+    
+    <div
+    id="tsml-ui"
+    data-src="https://docs.google.com/spreadsheets/d/13W4lBuRWKpnHNOC_3wTXI5anLVOkyvMmyn4Wvqx1z3c/edit#gid=2133070274"
+    data-mapbox="pk.eyJ1Ijoiam9zaHJlaXNuZXIiLCJhIjoiY2tvYXA0YnZxMGRldDJxbzdta25uNGphdiJ9.eay-UKgIT99ALmdw08xBPw"
+    data-google="AIzaSyCS9M8Dqk5cMFqA7xvUrQEzT1u5IvcbT7c"
+    data-timezone="America/Los_Angeles">
+    </div>
+
+    <script src="https://tsml-ui.code4recovery.org/app.js" async></script>
+
   </body>
 </html>
